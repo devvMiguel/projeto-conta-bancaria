@@ -97,7 +97,7 @@ export function sobre(): void{
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: Miguel Ferreira");
     console.log("Generation Brasil - miguelgalvao_galvao@hotmail.com");
-    console.log("github.com/devvMiguel"); 
+    console.log("github.com/devvMiguel/projeto-conta-bancaria"); 
     console.log("*****************************************************");
 }
 
