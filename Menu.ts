@@ -1,14 +1,23 @@
 import read from 'readline-sync'
 import { colors } from './src/util/Colors';
+import { Conta } from './src/model/Conta';
 
 export function main (){
 
     let option: number;
 
+    const conta: Conta = new Conta(1, 123, 1, "Miguel", 10000);
+    conta.visualizar();
+    conta.sacar(10500);
+    conta.visualizar();
+    conta.depositar(5000);
+    conta.visualizar();
+
     while (true){
 
+        keyPress()
         console.clear();
-        console.log(colors.bg.black, colors.fg.greenstrong,
+        console.log(colors.fg.greenstrong,
                     "*****************************************************");
         console.log("                                                     ");
         console.log("                BANCO DO BRAZIL COM Z                ");
@@ -44,47 +53,47 @@ export function main (){
             case 1:
                 console.log("\n\nCriar Conta\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 2:
                 console.log("\n\nListar todas as Contas\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 3:
                 console.log("\n\nConsultar dados da Conta - por número\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 4:
                 console.log("\n\nAtualizar dados da Conta\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 5:
                 console.log("\n\nApagar uma Conta\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 6:
                 console.log("\n\nSaque\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 7:
                 console.log("\n\nDepósito\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             case 8:
                 console.log("\n\nTransferência entre Contas\n\n");
 
-                keyPress()
+                keyPress();
                 break;
             default:
                 console.log("\nOpção Inválida!");
 
-                keyPress()
+                keyPress();
                 break;
         }
 
@@ -93,7 +102,7 @@ export function main (){
     
 }
 
-export function sobre(): void{
+function sobre(): void{
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: Miguel Ferreira");
     console.log("Generation Brasil - miguelgalvao_galvao@hotmail.com");
@@ -103,7 +112,7 @@ export function sobre(): void{
 
 function keyPress(): void {
     console.log(colors.reset, "");
-    console.log("\nPressione ENTER para continuar...");
+    console.log("\nPressione ENTER para continuar...\n");
     read.prompt();
 }
 
